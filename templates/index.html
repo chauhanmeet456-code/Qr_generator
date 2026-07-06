@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>QR Code Generator</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="background"></div>
+
+    <div class="container">
+      <div class="glass">
+        <div class="left">
+          <h1>QR Code Generator</h1>
+
+          <p>Create Beautiful QR Codes Instantly</p>
+
+          <form method="POST">
+            <label>Enter URL / Text</label>
+
+            <input
+              type="text"
+              name="data"
+              placeholder="https://example.com"
+              required
+            />
+
+            <label>QR Size</label>
+
+            <input
+              type="range"
+              min="4"
+              max="20"
+              value="10"
+              name="size"
+              id="size"
+            />
+
+            <span id="sizeValue">10</span>
+
+            <label>Foreground Color</label>
+
+            <input type="color" name="fill" value="#000000" />
+
+            <label>Background Color</label>
+
+            <input type="color" name="back" value="#ffffff" />
+
+            <button type="submit">Generate QR</button>
+          </form>
+        </div>
+
+        <div class="right">
+          {% if qr %}
+
+          <div class="preview">
+            <img src="{{ qr }}" alt="QR Code" />
+
+            <a href="/download"> Download PNG </a>
+          </div>
+
+          {% else %}
+
+          <div class="placeholder">
+            <h2>Your QR Code</h2>
+
+            <p>QR Preview will appear here</p>
+          </div>
+
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
