@@ -1,7 +1,5 @@
-flask
+Flask
 qrcode
-pillow
-
-pip install -r requirements.txt
-
-pip install -r flask qrcode pillow
+Pillow
+gunicorn
+# pip install -r requirements.txt
