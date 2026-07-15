@@ -98,14 +98,13 @@ https://qr-generator-arec.onrender.com/
 
 ---
 
-### Home Page
+## Home Page
 
-![alt text](image.png)
+![Home Page](screenshots/image.png)
 
-### Generated QR
+## Generated QR
 
-![alt text](image-1.png)
-
+![Generated QR](screenshots/image-1.png)
 ---
 
 ## 📥 Supported QR Types
