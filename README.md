@@ -69,7 +69,7 @@ QR-Code-Generator/
 ### Clone Repository
 
 ```bash
-git clone https://github.com/chauhanmeet456-code/Qr_generator.git
+https://github.com/chauhanmeet456-code/Qr_generator.git
 ```
 
 ### Go to Project Folder
